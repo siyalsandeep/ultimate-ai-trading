@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #06080d;
+    --bg-surface: #0b0f17;
+    --bg-surface-elevated: #101520;
+    --border-subtle: rgba(255, 255, 255, 0.07);
+    --border-active: rgba(16, 185, 129, 0.35);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Force tabular numbers for financial clarity */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Accessible focus indicators */
+  *:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1.5px rgba(16, 185, 129, 0.6);
+  }
+}
+
+/* Reduced motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom terminal scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #080c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Subtle ambient radial highlights */
+.cinematic-glow {
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16, 185, 129, 0.07), transparent 70%);
+}
+
+.cinematic-glow-rose {
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(244, 63, 94, 0.08), transparent 70%);
+}

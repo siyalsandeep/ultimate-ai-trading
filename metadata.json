@@ -1,0 +1,6 @@
+{
+  "name": "Global AI Trader OS",
+  "description": "Institutional-grade multi-asset algorithmic trading operating system with deterministic risk controls, regime detection, reproducible backtesting, and paper execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
